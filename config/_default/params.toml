@@ -5,16 +5,17 @@ rssFullContent = true
 favicon = "/favicon.png"
 
 [footer]
-since = 2020
-customText = ""
+since = 2024
+customText = ''
 
 [dateFormat]
 published = "Jan 02, 2006"
 lastUpdated = "Jan 02, 2006 15:04 MST"
 
 [sidebar]
+subtitle = '''今天也在网络の迷宫里迷路，在OSの世界里捣鼓，在游戏里寻找快乐！
+欢迎来到我的技术小窝，一起分享踩坑心得吧～'''
 emoji = "🍥"
-subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
 [sidebar.avatar]
 enabled = true
@@ -23,8 +24,9 @@ src = "img/avatar.png"
 
 [article]
 headingAnchor = false
-math = false
+math = true
 readingTime = true
+toc = true
 
 [article.license]
 enabled = true
