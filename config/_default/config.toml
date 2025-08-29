@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://blog.calacaly.cn"
+baseurl = "https://calacaly.github.io"
 languageCode = "en-us"
 title = "Calacaly's Blog"
 
