@@ -5,7 +5,7 @@ export class Card {
         document.querySelectorAll('article').forEach(article => {
             if (article.classList.contains('main-article') === false) {
                 // 1. 添加 class="card"
-                if (article.parentElement.classList.contains('article-list--tile') === false && article.classList.contains('has-image') === false) {
+                if (article.parentElement.classList.contains('article-list--tile') === false && article.parentElement.classList.contains('article-list') === false) {
                     article.parentElement.classList.add('card');
                 } else {
                     article.classList.add('card');
