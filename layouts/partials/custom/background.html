@@ -1,0 +1,57 @@
+<!-- layouts/partials/head/custom.html -->
+
+{{ if .Site.Params.custom.background.enable }} 
+  {{ with .Site.Params.custom.background.light }}
+    {{ $bg := resources.Get (.src) }}
+    <style>
+      [data-scheme="light"] body {
+        background: url("{{ $bg.Permalink }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      [data-scheme="light"] .glass-overlay-light {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(var(--blur)); /* 应用模糊效果 */
+        background: var(--body-background);
+        opacity: var(--opacity);
+        z-index: -1; /* 确保该层位于内容之下 */
+      }
+
+    </style>
+    <div class="glass-overlay-light" style="--blur: {{ .blur }}px; --opacity: {{ .opacity }};"></div>
+  {{ end }}
+
+
+  {{ with .Site.Params.custom.background.dark }}
+    {{ $bg := resources.Get (.src) }}
+    <style>
+      [data-scheme="dark"] body {
+        background: url("{{ $bg.Permalink }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      [data-scheme="dark"] .glass-overlay-dark {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(var(--blur)); /* 应用模糊效果 */
+        background: var(--body-background);
+        opacity: var(--opacity);
+        z-index: -1; /* 确保该层位于内容之下 */
+      }
+
+    </style>
+    <div class="glass-overlay-dark" style="--blur: {{ .blur }}px; --opacity: {{ .opacity }};"></div>
+  {{ end }}
+{{ end }}
+

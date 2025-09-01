@@ -1,0 +1,14 @@
+{{ $cardJs := resources.Get "js/card.js" | resources.Minify | resources.Fingerprint  }}
+<script type="module" >
+
+
+    {{ with .Site.Params.custom.effect.card }} 
+        {{ if .enable }}
+            import { Card } from '{{ $cardJs.Permalink }}';
+            document.addEventListener("DOMContentLoaded", () => {
+                new Card().init({{ .limit }});
+            });
+        {{ end }}
+    {{ end }}
+
+</script>

@@ -1,3 +1,21 @@
+[custom.background]
+enable = true
+
+[custom.background.light]
+src = "img/iln.png"
+blur = 10
+opacity = 0.8
+[custom.background.dark]
+src = "img/iln.png"
+blur = 10
+opacity = 0.4
+
+
+[custom.effect.card]
+enable = true
+limit = 2
+
+
 # Pages placed under these sections will be shown on homepage and archive page.
 mainSections = ["post"]
 # Output page's full content in RSS.
@@ -79,7 +97,7 @@ enabled = true
 ## Comments
 [comments]
 enabled = true
-provider = "disqus"
+provider = "giscus"
 
 [comments.disqusjs]
 shortname = ""
@@ -130,13 +148,13 @@ serverName = "cactus.chat"
 siteName = ""
 
 [comments.giscus]
-repo = ""
-repoID = ""
+repo = "calacaly/calacaly.github.io"
+repoID = "R_kgDOPmPAeg"
 category = ""
 categoryID = ""
-mapping = ""
-lightTheme = ""
-darkTheme = ""
+mapping = "pathname"
+lightTheme = "light"
+darkTheme = "dark"
 reactionsEnabled = 1
 emitMetadata = 0
 
